@@ -1,0 +1,470 @@
+/**
+ * All of the CSS for your admin-specific functionality should be
+ * included in this file.
+ */
+
+
+.CodeMirror {
+	height: 550px !important;
+}
+
+
+/**
+ * Utilities
+ */
+
+.issslpg-hide {
+	display: none !important;
+}
+
+.issslpg-show {
+	display: inherit !important;
+}
+
+.issslpg-nowrap {
+	white-space: nowrap;
+}
+
+
+/* CMB2: Disabled Field */
+
+.issslpg-cmb-disabled-field {
+	opacity: .5;
+}
+
+.issslpg-cmb-disabled-field {
+	pointer-events: none;
+}
+
+
+/**
+ * Active Indicator
+ */
+
+.issslpg-active-indicator {
+	color: #48bb78;
+	font-size: .5rem;
+}
+
+
+/**
+ * Admin Tables
+ */
+
+.issslpg-check-column {
+	text-align: center !important;
+	padding-top: 8px !important;
+}
+
+
+/**
+ * States Page
+ */
+
+.issslpg-states-table {
+	table-layout: auto !important;
+}
+
+.issslpg-states-table tbody th.check-column {
+	padding-top: 0 !important;
+	padding-bottom: 0 !important;
+}
+
+.issslpg-states-table tbody th,
+.issslpg-states-table tbody td {
+	vertical-align: middle !important;
+	height: 26px;
+}
+
+.issslpg-state-download-button + .issslpg-state-download-button {
+	margin-left: .5rem;
+}
+
+/* .issslpg-state-download-button {
+	background: #007cba;
+    border-color: #007cba;
+    color: #fff;
+    text-decoration: none;
+    text-shadow: none;
+    border-radius: 3px;
+    white-space: nowrap;
+    min-height: 26px;
+    line-height: 2.28;
+    padding: 0 8px;
+	font-size: 11px;
+} */
+
+
+/**
+ * Template Page: Hide links and buttons to view template page
+ */
+
+body.post-type-issslpg-template #wp-admin-bar-view,
+body.post-type-issslpg-template #message.updated.notice a,
+body.post-type-issslpg-template #edit-slug-box,
+body.post-type-issslpg-template table.wp-list-table td.column-title .row-actions .view,
+body.post-type-issslpg-local #wp-admin-bar-view,
+body.post-type-issslpg-local #message.updated.notice a,
+body.post-type-issslpg-local #edit-slug-box,
+body.post-type-issslpg-local table.wp-list-table td.column-title .row-actions .view {
+	display: none;
+}
+
+
+/**
+ * Utility: Hide Element
+ */
+
+.issslpg-hidden {
+	display: none;
+}
+
+
+/**
+ * Business Hours
+ */
+
+.cmb-type-business-day-hours input[type=text]::placeholder {
+	opacity: .5;
+}
+
+
+/**
+ * Settings: Sort List
+ */
+
+.issslpg-sort-list-item {
+	display: flex;
+	align-items: center;
+	padding: .3rem 1rem .3rem .3rem;
+	border: 1px solid #d5d5d5;
+	max-width: 300px;
+	cursor: grab;
+	background: rgb(255,255,255);
+	background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(230,230,230,1) 100%);
+}
+
+.issslpg-sort-list-item-icon {
+	margin-right: .3rem;
+	color: #999;
+}
+
+
+
+/**
+ * Progress Bar
+ *
+ * Source: https://css-tricks.com/css3-progress-bars/
+ */
+
+.issslpg-progress-bar {
+	min-width: 100px;
+	width: 200px;
+	height: 10px;
+	padding: 2px;
+	background-color: #f9f9f9;
+	border: 1px solid #e0e0e0;
+	border-radius: 3px;
+}
+
+.issslpg-progress-bar-status-wrapper {
+	background-color: #e0e0e0;
+	height: 100%;
+	width: 100%;
+	border-radius: 2px;
+	position: relative;
+	overflow: hidden;
+	transition: all .5s;
+}
+
+.issslpg-progress-bar-status {
+	background-color: #4299e1;
+	background-image: linear-gradient(to bottom, #4299e1, #3182ce);
+	height: 100%;
+	width: 0%;
+	border-radius: 2px;
+	position: relative;
+	overflow: hidden;
+	transition: all .5s;
+}
+
+.issslpg-progress-bar[data-status='done'] .issslpg-progress-bar-status {
+	width: 100%;
+	background-color: #48bb78;
+	background-image: linear-gradient(to bottom, #48bb78, #38a169);
+}
+
+.issslpg-progress-bar[data-progress='0'] .issslpg-progress-bar-status-wrapper:after,
+.issslpg-progress-bar[data-active='true'] .issslpg-progress-bar-status:after {
+	content: "";
+	position: absolute;
+	top: 0; left: 0; bottom: 0; right: 0;
+	background-image: linear-gradient(
+	  -45deg,
+	  rgba(255, 255, 255, .2) 25%,
+	  transparent 25%,
+	  transparent 50%,
+	  rgba(255, 255, 255, .2) 50%,
+	  rgba(255, 255, 255, .2) 75%,
+	  transparent 75%,
+	  transparent
+	);
+	z-index: 1;
+	background-size: 50px 50px;
+	animation: move 2s linear infinite;
+	border-top-right-radius: 8px;
+	border-bottom-right-radius: 8px;
+	border-top-left-radius: 20px;
+	border-bottom-left-radius: 20px;
+	overflow: hidden;
+	animation: issslpg-progress-bar-move 2s linear infinite;
+}
+
+@keyframes issslpg-progress-bar-move {
+	0% {
+		background-position: 0 0;
+	}
+	100% {
+		background-position: 50px 50px;
+	}
+}
+
+
+/**
+ * Location Settings: Breadcrumbs
+ */
+
+.issslpg-breadcrumbs {
+	margin-bottom: 23px;
+	margin-top: 23px;
+	padding: 10px;
+	overflow: hidden;
+	/*background: #fbfbfb;*/
+	background: #fff;
+	border: 1px solid #e5e5e5;
+	box-shadow: 0 1px 1px rgba(0,0,0,.04);
+}
+
+.issslpg-breadcrumbs-item a {
+	text-decoration: none;
+}
+
+.issslpg-breadcrumbs-item a:hover {
+	/*text-decoration: underline;*/
+}
+
+.issslpg-breadcrumbs-separator {
+	/*font-weight: bold;*/
+	margin: 5px;
+}
+
+
+/**
+ * County Edit Screen
+ */
+
+.isssplg-edit-county-form {
+	/*max-width: 500px;*/
+}
+
+/* Custom Locations */
+
+.isssplg-custom-location-area {}
+
+.isssplg-custom-location-input-area {
+	display: flex;
+}
+
+.isssplg-custom-location-input-area--template {
+	display: none;
+}
+
+.isssplg-custom-location-input-area:not(:last-child) {
+	margin-bottom: 0 !important;
+	padding-bottom: 0 !important;
+}
+
+.isssplg-custom-location-input-wrapper {
+	margin-right: .5rem;
+}
+
+.isssplg-custom-location-controls {
+	display: flex;
+	align-items: center;
+}
+
+.isssplg-custom-location-add-button,
+.isssplg-custom-location-remove-button {
+	border-radius: 4px;
+	color: white;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 1.3rem;
+	height: 1.9rem;
+	width: 1.9rem;
+	cursor: pointer;
+}
+
+.isssplg-custom-location-add-button div,
+.isssplg-custom-location-remove-button div {
+	position: relative;
+	top: -2px;
+	line-height: 1.6;
+}
+
+.isssplg-custom-location-add-button {
+	background-color: #2f855a;
+}
+
+.isssplg-custom-location-remove-button {
+	background-color: #c53030;
+	margin-right: .3rem;
+}
+
+.isssplg-custom-location-add-button:hover {
+	background-color: #276749;
+}
+
+.isssplg-custom-location-remove-button:hover {
+	background-color: #9b2c2c;
+}
+
+.isssplg-custom-location-import-export-area {
+	display: flex;
+	max-width: 580px;
+}
+
+.isssplg-custom-location-import-area {
+	margin-right: 2rem;
+}
+
+.isssplg-custom-location-export-area {
+	border-radius: 3px;
+	border: 1px solid #016087;
+	padding: 0 .7rem;
+	display: flex;
+	align-items: center;
+}
+
+.isssplg-custom-location-export-area label {
+	margin-right: .3rem;
+}
+
+.isssplg-custom-location-export-area input {
+	width: 283px;
+}
+
+
+/**
+ * CMB2: Custom Field: HTML Sitemap Export
+ */
+
+.issslpg-cmb2-html-sitemap-export-field {
+	display: flex;
+	align-items: center;
+}
+
+.issslpg-cmb2-html-sitemap-export-field .issslpg-html-sitemap-button {
+	top: 1px;
+	display: block;
+	position: relative;
+}
+
+
+/**
+ * CMB2: Set Local Content selector to full width
+ */
+
+.post-type-issslpg-landing-page #_issslpg_local_content_page {
+	width: 100%;
+}
+
+
+/**
+ * CMB2: Hide red 'x' button to remove panel
+ */
+
+.cmb2-metabox button.dashicons-before.dashicons-no-alt.cmb-remove-group-row:not([disabled]) {
+	display: none;
+}
+#poststuff .repeatable .cmb-group-title {
+	padding-left: 12px !important;
+}
+
+
+/**
+ * Freemius: Hide links to Freemius admin pages on Plugins page
+ */
+
+/* Freemius: Hide affiliate marketing notifications */
+body.issslpg-white-labeled .fs-slug-seo-landing-page-generator.promotion[data-id='affiliate_program'] {
+	display: none !important;
+}
+
+/* Freemius: Hide plugin links */
+body.issslpg-white-labeled.plugins-php table.plugins tr[data-plugin^="seo-landing-page-generator"] .addons,
+body.issslpg-white-labeled.plugins-php table.plugins tr[data-plugin^="seo-landing-page-generator"] .upgrade,
+body.issslpg-white-labeled.plugins-php table.plugins tr[data-plugin^="seo-landing-page-generator"] .activate-license,
+body.issslpg-white-labeled.plugins-php table.plugins tr[data-plugin^="seo-landing-page-generator"] .opt-in-or-opt-out,
+body.issslpg-white-labeled.plugins-php table.plugins tr[data-plugin^="seo-landing-page-generator"] .toggle-auto-update,
+body.issslpg-white-labeled.plugins-php table.plugins tr[data-plugin^="seo-landing-page-generator"] .open-plugin-details-modal,
+body.issslpg-simulated-plan.plugins-php table.plugins tr[data-plugin^="seo-landing-page-generator"] .upgrade,
+body.issslpg-simulated-plan.plugins-php table.plugins tr[data-plugin^="seo-landing-page-generator"] .activate-license,
+body.issslpg-simulated-plan.plugins-php table.plugins tr[data-plugin^="seo-landing-page-generator"] .opt-in-or-opt-out {
+	display: none;
+}
+
+/* Freemius: Hide Update notification on Plugins page */
+body.issslpg-white-labeled.plugins-php table.plugins #seo-landing-page-generator-update {
+	display: none;
+}
+
+/* Freemius: Hide 'View Details' link */
+body.issslpg-white-labeled.plugins-php table.plugins #seo-landing-page-generator-update {
+	display: none;
+}
+
+
+/**
+ * TinyMCE: Add icon to Shortcode button
+ */
+
+i.issslpg-tinymce-shortcode-button-icon {
+	font: normal 20px/1 dashicons;
+	vertical-align: top;
+	speak: none;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+i.issslpg-tinymce-shortcode-button-icon:before {
+	/*background-image: url('../images/issslpg-shortcode-button-icon.png');*/
+	content: "\f111";
+}
+
+
+/**
+ * Plugin: SweetAlerts 2
+ */
+
+.swal2-title {
+	line-height: 1;
+}
+
+.swal2-header + .swal2-content {
+	margin-top: .5rem;
+}
+
+
+/**
+ * Plugin: LightGallery
+ */
+
+
+.lg-on #adminmenuwrap {
+	z-index: 1000;
+}
+.lg-on .lg-toolbar {
+	margin-top: 36px;
+}

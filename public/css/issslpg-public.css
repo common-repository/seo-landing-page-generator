@@ -1,0 +1,219 @@
+/**
+ * All of the CSS for your public-facing functionality should be
+ * included in this file.
+ */
+
+
+
+/**
+ * Flex Slider
+ */
+
+.flexslider {
+    margin: 0 0 1rem 0 !important;
+    cursor: pointer;
+    background: black;
+    border: none !important;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    -o-box-shadow: none;
+    box-shadow: none;
+}
+
+.flexslider > .slides {
+    margin: 0 !important;
+}
+
+.flexslider > .slides li {
+    margin: 0;
+}
+
+.flex-direction-nav a {
+    opacity: .7;
+}
+
+.flex-direction-nav .flex-prev {
+    left: 10px;
+}
+.flex-direction-nav .flex-next {
+    right: 10px;
+}
+
+
+
+/**
+ * Phone Link
+ */
+
+.issslpg-phone-link--font-size-medium { font-size: 1.25em; }
+.issslpg-phone-link--font-size-large { font-size: 1.5em; }
+.issslpg-phone-link--font-size-extralarge { font-size: 2em; }
+
+.issslpg-phone-link--font-weight-medium { font-weight: 500; }
+.issslpg-phone-link--font-weight-semibold { font-weight: 600; }
+.issslpg-phone-link--font-weight-bold { font-weight: 700; }
+
+.issslpg-phone-link--font-style-italic { font-style: italic; }
+
+.issslpg-phone-link--text-decoration-no-underline-no-underline,
+.issslpg-phone-link--text-decoration-no-underline-no-underline:hover { text-decoration: none; }
+.issslpg-phone-link--text-decoration-underline-underline,
+.issslpg-phone-link--text-decoration-underline-underline:hover { text-decoration: underline; }
+.issslpg-phone-link--text-decoration-no-underline-underline { text-decoration: none; }
+.issslpg-phone-link--text-decoration-no-underline-underline:hover { text-decoration: underline; }
+.issslpg-phone-link--text-decoration-underline-no-underline { text-decoration: underline; }
+.issslpg-phone-link--text-decoration-underline-no-underline:hover { text-decoration: none; }
+
+
+
+/**
+ * CTA Button
+ */
+
+
+/* General */
+
+.issslpg-cta-button__icon {
+    padding-right: .8rem;
+    display: inline-block;
+}
+
+.issslpg-cta-button__icon img,
+.issslpg-cta-button__icon svg {
+    width: 2rem;
+    margin-bottom: 0;
+    vertical-align: middle;
+    box-shadow: none !important;
+    border: none !important;
+}
+
+/* Styled */
+
+.issslpg-cta-button--styled.issslpg-cta-button,
+.issslpg-cta-button--styled .issslpg-cta-button__icon svg {
+    transition: all .2s ease-in-out;
+}
+
+.issslpg-cta-button--styled.issslpg-cta-button,
+.issslpg-cta-button--styled.issslpg-cta-button:hover {
+    text-decoration: none !important;
+}
+
+.issslpg-cta-button--styled.issslpg-cta-button--full {
+    display: block;
+}
+
+.issslpg-cta-button--styled.issslpg-cta-button--auto {
+    display: inline-block;
+}
+
+
+.issslpg-cta-button--styled.issslpg-cta-button-font-style--default .issslpg-cta-button__prefix {
+    font-weight: 300;
+}
+.issslpg-cta-button--styled.issslpg-cta-button-font-style--default .issslpg-cta-button__title {
+    font-weight: bold;
+}
+.issslpg-cta-button--styled.issslpg-cta-button-font-style--default .issslpg-cta-button__suffix {
+    font-weight: 300;
+}
+.issslpg-cta-button--styled.issslpg-cta-button-font-style--bold {
+    font-weight: bold;
+}
+.issslpg-cta-button--styled.issslpg-cta-button-font-style--bold-italic {
+    font-weight: bold;
+    font-style: italic;
+}
+.issslpg-cta-button--styled.issslpg-cta-button-font-style--italic {
+    font-style: italic;
+}
+
+.issslpg-cta-button--styled.issslpg-cta-button--medium {
+    font-size: 1.2rem;
+    padding: 1.4rem 3rem;
+}
+.issslpg-cta-button--styled.issslpg-cta-button--large {
+    font-size: 1.5rem;
+    padding: 1.6rem 4rem;
+}
+.issslpg-cta-button--styled.issslpg-cta-button--extra-large {
+    font-size: 1.8rem;
+    padding: 2rem 6rem;
+}
+
+.issslpg-cta-button--styled.issslpg-cta-button--rounded {
+    border-radius: .5em;
+}
+
+.issslpg-cta-button--styled.issslpg-cta-button--small-shadow {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+.issslpg-cta-button--styled.issslpg-cta-button--medium-shadow {
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+.issslpg-cta-button--styled.issslpg-cta-button--large-shadow {
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+.issslpg-cta-button--styled .issslpg-cta-button__icon {
+     padding-right: .8rem;
+     display: inline-block;
+}
+
+.issslpg-cta-button--styled .issslpg-cta-button__icon img,
+.issslpg-cta-button--styled .issslpg-cta-button__icon svg {
+    width: 1.5em;
+    height: 1.5em;
+    margin-bottom: 0;
+    vertical-align: middle;
+}
+
+.issslpg-cta-button--styled .issslpg-cta-button__inner-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+/**
+ * FAQ Accordion Shortcode
+ */
+
+.issslpg-faq-accordion {}
+
+.issslpg-faq-accordion-item {
+    margin-bottom: 1rem;
+}
+
+.issslpg-faq-accordion-item-header {
+    font-weight: bold;
+    margin-bottom: .5rem;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.issslpg-faq-accordion-icon {
+    display: flex;
+    align-items: center;
+    width: 20px;
+}
+
+.issslpg-faq-accordion-icon span {
+    transition: all 0.4s ease;
+}
+
+.issslpg-faq-accordion-item[data-status='open'] .issslpg-faq-accordion-icon span {
+    transform: rotateZ(90deg);
+}
+
+.issslpg-faq-accordion-title {}
+
+.issslpg-faq-accordion-item-body {
+    display: none;
+    padding-left: 20px;
+}
